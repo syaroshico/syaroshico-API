@@ -1,7 +1,7 @@
 {
-    "name": "laravel/lumen",
-    "description": "The Laravel Lumen Framework.",
-    "keywords": ["framework", "laravel", "lumen"],
+    "name": "hinaloe/syaroshico-api",
+    "description": "count syaroshico Tweets.",
+    "keywords": ["syaroshico"],
     "license": "MIT",
     "type": "project",
     "require": {
