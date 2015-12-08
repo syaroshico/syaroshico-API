@@ -49,19 +49,25 @@
 <div class="splash-container background"></div>
 <div class="content-wrapper">
     <div class="content">
-        <div class="is-center"><a class="twitter-share-button"
-                                  href="https://twitter.com/share"
-                                  data-url="https://api.syaroshi.co/"
-                                  data-via="hnle0"
-                                  data-related="sudosan"
-                                  data-hashtags="シャロシコ"
-                                  data-text="シャロシコを数えよう。 ～シャロシコAPI～">
-                Tweet
-            </a><div
-                    class="fb-like"
-                    data-share="true"
-                    data-width="450"
-                    data-show-faces="true">
+        <div class="is-center">
+            <div class="social-buttons">
+                <div>
+                    <a class="twitter-share-button"
+                       href="https://twitter.com/share"
+                       data-url="https://api.syaroshi.co/"
+                       data-via="hnle0"
+                       data-related="sudosan"
+                       data-hashtags="シャロシコ"
+                       data-text="シャロシコを数えよう。 ～シャロシコAPI～">
+                        Tweet
+                    </a>
+                </div>
+                <div>
+                    <div
+                            class="fb-like" data-layout="button" data-action="like" data-show-faces="false"
+                            data-share="false" data-href="https://api.syaroshi.co/">
+                    </div>
+                </div>
             </div>
         </div>
         <h2 class="content-head is-center" id="doc">Document</h2>
@@ -333,7 +339,7 @@
     }
 
     .splash-container.background {
-        background: #eee311 url('https://pbs.twimg.com/media/CUsgughUEAAuRp0.jpg:orig');
+        background: #eee311 url('https://pbs.twimg.com/media/CUsgughUEAAuRp0.jpg:orig') center;
         -webkit-background-size: cover;
         background-size: cover;
         z-index: 0;
@@ -510,6 +516,26 @@
         padding-left: 12px;
         padding-top: 5px;
 
+    }
+
+    .social-buttons > div {
+        display: inline-block;
+    }
+
+    @media screen and (orientation: portrait) {
+
+        .splash-container.background {
+            -webkit-filter: blur(10px);
+            -moz-filter: blur(10px);
+            -ms-filter: blur (10px);
+            -o-filter: blur(10px);
+            filter: blur(10px);
+        }
+
+    }
+
+    .fb_iframe_widget > span {
+        vertical-align: baseline !important;
     }
 </style>
 <script>
