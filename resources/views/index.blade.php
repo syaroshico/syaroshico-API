@@ -16,6 +16,7 @@
     <meta property="og:site_name" content="シャロシコAPI">
     <meta property="og:locale" content="ja_JP">
     <meta property="og:image" content="https://syaroshi.co/img/logo.png">
+    <meta property="fb:app_id" content="501683120013640">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="hnle0">
     <script>
@@ -56,7 +57,13 @@
                                   data-hashtags="シャロシコ"
                                   data-text="シャロシコを数えよう。 ～シャロシコAPI～">
                 Tweet
-            </a></div>
+            </a><div
+                    class="fb-like"
+                    data-share="true"
+                    data-width="450"
+                    data-show-faces="true">
+            </div>
+        </div>
         <h2 class="content-head is-center" id="doc">Document</h2>
     </div>
 
@@ -164,12 +171,12 @@
 
         <div class="pure-g">
             <div class="l-box-lrg pure-u-1 pure-u-md-3-4 pure-u-lg-5-8">
-                <p><a href="http://fleurdulap.in/" >桐間紗路</a>,<a href="https://syaroshi.co/">@sudosan</a></p>
+                <p><a href="http://fleurdulap.in/">桐間紗路</a>,<a href="https://syaroshi.co/">@sudosan</a></p>
             </div>
         </div>
     </div>
     <div class="footer l-box is-center">
-        <p>© api.syaroshi.co by  hinaloe 2015</p>
+        <p>© api.syaroshi.co by hinaloe 2015</p>
     </div>
 
 
@@ -520,6 +527,25 @@
 
     ga('create', 'UA-52654113-4', 'auto');
     ga('send', 'pageview');
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '501683120013640',
+            xfbml: true,
+            version: 'v2.5'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
 
 </script>
 </body>
