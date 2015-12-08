@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/pure/0.6.0/pure-min.css">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://platform.twitter.com/widgets.js" async></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="me" href="https://twitter.com/hnle0">
     <script>
         $(function ($) {
@@ -117,17 +118,40 @@
         <div class="pure-g">
             <div class="l-box-lrg pure-u-1 pure-u-md-3-4 pure-u-lg-5-8">
                 <p> このAPIには現在レートリミット等の制限は設けていませんが、TwitterのAPIやこのプログラムの内部的エラーが返される場合があります。</p>
-  <p>エラーの際は<code>message</code>にエラーメッセージ、<code>error</code>に<code>true</code>を含むJSONが返されます。countにカウントが含まれる場合もありますが、負の値が含まれる可能性があることを考慮してください。(この場合カウントとは関係が無くなります)</p>
+
+                <p>エラーの際は<code>message</code>にエラーメッセージ、<code>error</code>に<code>true</code>を含むJSONが返されます。countにカウントが含まれる場合もありますが、負の値が含まれる可能性があることを考慮してください。(この場合カウントとは関係が無くなります)
+                </p>
             </div>
         </div>
-        <h2 class="content-head is-center">Force SSL</h2>
+        <h2 class="content-head is-center"><i class="fa fa-lock"></i> Force SSL</h2>
+
         <div class="pure-g">
             <div class="l-box-lrg pure-u-1 pure-u-md-3-4 pure-u-lg-5-8">
-<p>全てのエンドポイントへのアクセスはSSL(TLS)によって保護されます。もし証明書にエラーがある際は<a href="https://twitter.com/hnle0">@hnle0</a>にpingしてください。</p>            </div>
+                <p>全てのエンドポイントへのアクセスはSSL(TLS)によって保護されます。もし証明書にエラーがある際は<a href="https://twitter.com/hnle0">@hnle0</a>にpingしてください。
+                </p>
+            </div>
+        </div>
+        <h2 class="content-head is-center"><i class="fa fa-github"></i> Code on GitHub</h2>
+
+        <div class="pure-g">
+            <div class="l-box-lrg pure-u-1 pure-u-md-3-4 pure-u-lg-5-8">
+                <p>ソースコードはGitHubにてMITライセンスにて公開しています。
+                </p>
+                <a href="https://github.com/hinaloe/syaroshico" class="pure-button pure-button-primary"><i
+                            class="fa fa-code-fork"></i> Fork me on GitHub</a>
+            </div>
         </div>
 
     </div>
+    <div class="footer l-box is-center">
+        <p>© hinaloe 2015</p>
+    </div>
 
+
+</div>
+
+<div class="floating-top-button">
+    <a href="#"><i class="fa fa-chevron-up"></i></a>
 </div>
 
 
@@ -432,6 +456,28 @@
         .splash-head {
             font-size: 300%;
         }
+    }
+
+    .floating-top-button {
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 20px;
+        z-index: 100;
+        background-color: rgba(128, 131, 123, 0.65);
+        border-radius: 50%;
+    }
+
+    .floating-top-button a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: white;
+
+        padding-left: 12px;
+        padding-top: 5px;
+
     }
 </style>
 </body>
