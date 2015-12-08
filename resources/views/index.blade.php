@@ -8,6 +8,16 @@
     <script src="https://platform.twitter.com/widgets.js" async></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="me" href="https://twitter.com/hnle0">
+    <meta name="description" content="シャロシコを計測しよう。シャロシコAPIはTwitter上のシャロシコツイートをカウントするAPIです。">
+    <meta property="og:url" content="https://api.syaroshi.co/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="シャロシコAPI">
+    <meta property="og:description" content="シャロシコを計測しよう。">
+    <meta property="og:site_name" content="シャロシコAPI">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://syaroshi.co/img/logo.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="hnle0">
     <script>
         $(function ($) {
             $('a[href^=#]').click(function (e) {
@@ -40,7 +50,7 @@
     <div class="content">
         <div class="is-center"><a class="twitter-share-button"
                                   href="https://twitter.com/share"
-                                  data-url="https://syaroshico.hinaloe.net/"
+                                  data-url="https://api.syaroshi.co/"
                                   data-via="hnle0"
                                   data-related="sudosan"
                                   data-hashtags="シャロシコ"
@@ -123,7 +133,7 @@
                 </p>
             </div>
         </div>
-         <h2 class="content-head is-center">CORS Ready</h2>
+        <h2 class="content-head is-center">CORS Ready</h2>
 
         <div class="pure-g">
             <div class="l-box-lrg pure-u-1 pure-u-md-3-4 pure-u-lg-5-8">
@@ -131,7 +141,7 @@
             </div>
         </div>
 
-       <h2 class="content-head is-center"><i class="fa fa-lock"></i> Force SSL</h2>
+        <h2 class="content-head is-center"><i class="fa fa-lock"></i> Force SSL</h2>
 
         <div class="pure-g">
             <div class="l-box-lrg pure-u-1 pure-u-md-3-4 pure-u-lg-5-8">
@@ -150,9 +160,16 @@
             </div>
         </div>
 
+        <h2 class="content-head is-center">Special Thanks</h2>
+
+        <div class="pure-g">
+            <div class="l-box-lrg pure-u-1 pure-u-md-3-4 pure-u-lg-5-8">
+                <p><a href="http://fleurdulap.in/" >桐間紗路</a>,<a href="https://syaroshi.co/">@sudosan</a></p>
+            </div>
+        </div>
     </div>
     <div class="footer l-box is-center">
-        <p>© hinaloe 2015</p>
+        <p>© api.syaroshi.co by  hinaloe 2015</p>
     </div>
 
 
@@ -489,13 +506,20 @@
     }
 </style>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-52654113-4', 'auto');
-  ga('send', 'pageview');
+    ga('create', 'UA-52654113-4', 'auto');
+    ga('send', 'pageview');
 
 </script>
 </body>
