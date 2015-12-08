@@ -4,6 +4,13 @@ Count syaroshico tweet using Twitter OAuth2, based on lumen.
 
 live on https://syaroshico.hinaloe.net/
 
+### requirement
+
+- PHP **7.0+** *(least 5.6? but I'd not test and developed on PHP7)*
+- Composer
+- Twitter API CK/CS
+- MySQL or compatible DB 
+
 ### Setup
 
 ```shell-session
