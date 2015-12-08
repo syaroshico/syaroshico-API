@@ -123,7 +123,15 @@
                 </p>
             </div>
         </div>
-        <h2 class="content-head is-center"><i class="fa fa-lock"></i> Force SSL</h2>
+         <h2 class="content-head is-center">CORS Ready</h2>
+
+        <div class="pure-g">
+            <div class="l-box-lrg pure-u-1 pure-u-md-3-4 pure-u-lg-5-8">
+                <p>CORSに対応しています。JavaScript+XHR2で任意のサイトにカウントを利用できます。但し現在JSONPのサポートの予定はありません。必要な場合は検討するので問い合わせてください。</p>
+            </div>
+        </div>
+
+       <h2 class="content-head is-center"><i class="fa fa-lock"></i> Force SSL</h2>
 
         <div class="pure-g">
             <div class="l-box-lrg pure-u-1 pure-u-md-3-4 pure-u-lg-5-8">
