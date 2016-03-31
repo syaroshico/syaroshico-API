@@ -99,6 +99,8 @@
                     <dd>「シャロシコ」(単語) を検索対象に入れるか否か <code>true</code>/<code>false</code></dd>
                     <dt>(bool) force_cache</dt>
                     <dd>強制的にキャッシュを使用する <code>true</code>/<code>false</code></dd>
+                    <dt>(bool) chino</dt>
+                    <dd>シャロシコの代わりにチノシコをカウントする。他のオプションとは併用不可。オプションをつけると値に関わらず有効。</dd>
                 </dl>
                 <h4>レスポンス</h4>
                 <dl>
