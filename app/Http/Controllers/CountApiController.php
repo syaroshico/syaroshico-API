@@ -9,23 +9,29 @@ use \Laravel\Lumen\Routing\Controller as BaseController;
 use Symfony\Component\HttpFoundation\Response;
 use TwitterOAuth\Exception\TwitterException;
 
-class CountApiController extends BaseController {
+class CountApiController extends BaseController
+{
 
     const BOTH_QUERY_VALUE = 'syaroshi.co OR シャロシコ exclude:retweets';
     const URL_QUERY_VALUE = 'syaroshi.co exclude:retweets';
     const SYAROSHICO_SEARCH_VALUE = 'シャロシコ exclude:retweets';
+    const CHINOSHICO_SEARCH_VALUE = 'チノシコ exclude:retweets';
 
     /**
      * @param Request $request
      *
      * @return Response
      */
-    public function count( Request $request ) {
+    public function count( Request $request )
+    {
         try {
             $include_uri   = $request->input( 'url' );
             $include_texts = $request->input( 'shico' );
             $force_cache   = $request->input( 'force_cache' );
-            if ( ( is_null( $include_uri ) && is_null( $include_texts ) ) or ( $include_uri && $include_texts ) ) {
+            $is_chino      = $request->input( 'chino' );
+            if ( ! is_null( $is_chino ) ) {
+                $keyword = self::CHINOSHICO_SEARCH_VALUE;
+            } else if ( ( is_null( $include_uri ) && is_null( $include_texts ) ) or ( $include_uri && $include_texts ) ) {
                 $keyword = self::BOTH_QUERY_VALUE;
             } else if ( $include_uri && ! $include_texts ) {
                 $keyword = self::URL_QUERY_VALUE;

@@ -17,37 +17,47 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         // $this->call('UserTableSeeder');
-        $this->call('OptionsTableSeeder');
+        $this->call( 'OptionsTableSeeder' );
 
         Model::reguard();
     }
 }
 
-class OptionsTableSeeder extends Seeder {
-    const COUNT_FORMAT = 'count[%s]' ;
-    const LATEST_FORMAT ='latest[%s]';
-    public function run() {
-        DB::table('options')->delete();
+class OptionsTableSeeder extends Seeder
+{
+    const COUNT_FORMAT = 'count[%s]';
+    const LATEST_FORMAT = 'latest[%s]';
+
+    public function run()
+    {
+        DB::table( 'options' )->delete();
 
         // Hard code know value (2013~2015-12-07)
 
         /*
          * Both count
          */
-        Options::set(sprintf(self::COUNT_FORMAT, CountApiController::BOTH_QUERY_VALUE),'10820');
-        Options::set(sprintf(self::LATEST_FORMAT, CountApiController::BOTH_QUERY_VALUE),'673486754981154816');
+        Options::set( sprintf( self::COUNT_FORMAT, CountApiController::BOTH_QUERY_VALUE ), '23021' );
+        Options::set( sprintf( self::LATEST_FORMAT, CountApiController::BOTH_QUERY_VALUE ), '715571766265942016' );
 
         /*
          * URL count
          */
-        Options::set(sprintf(self::COUNT_FORMAT, CountApiController::URL_QUERY_VALUE),'710');
-        Options::set(sprintf(self::LATEST_FORMAT, CountApiController::URL_QUERY_VALUE),'673481158164811776');
+        Options::set( sprintf( self::COUNT_FORMAT, CountApiController::URL_QUERY_VALUE ), '1778' );
+        Options::set( sprintf( self::LATEST_FORMAT, CountApiController::URL_QUERY_VALUE ), '715573460789911552' );
 
         /*
          * Syaroshico count
          */
-        Options::set(sprintf(self::COUNT_FORMAT, CountApiController::SYAROSHICO_SEARCH_VALUE),'10817');
-        Options::set(sprintf(self::LATEST_FORMAT, CountApiController::SYAROSHICO_SEARCH_VALUE),'673789641200308224');
+        Options::set( sprintf( self::COUNT_FORMAT, CountApiController::SYAROSHICO_SEARCH_VALUE ), '22338' );
+        Options::set( sprintf( self::LATEST_FORMAT, CountApiController::SYAROSHICO_SEARCH_VALUE ), '715573878886563840' );
+
+        /*
+         * ChinoShico count
+         */
+        Options::set( sprintf( self::COUNT_FORMAT, CountApiController::CHINOSHICO_SEARCH_VALUE ), '1955' );
+        Options::set( sprintf( self::LATEST_FORMAT, CountApiController::CHINOSHICO_SEARCH_VALUE ), '715566258679209984' );
+
 
     }
 }
